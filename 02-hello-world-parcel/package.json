@@ -1,0 +1,13 @@
+{
+  "name": "hello-world-with-parcel",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "latest",
+    "react": "^18.2.0"
+  }
+}
