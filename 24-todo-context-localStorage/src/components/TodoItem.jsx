@@ -10,6 +10,11 @@ function TodoItem(prop) {
   function toggleCompleted() {
     completedTodo(todo.id);
   }
+
+  function updateTodo() {
+    editTodo(todo.id, todoMsg);
+    setIsTodoEditable(false);
+  }
   return (
     <div
       className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${
@@ -38,10 +43,10 @@ function TodoItem(prop) {
           if (todo.isCompleted) return;
 
           if (isTodoEditable) {
-            editTodo();
+            updateTodo();
           } else setIsTodoEditable((prev) => !prev);
         }}
-        disabled={todo.isCompletedompleted}
+        disabled={todo.isCompleted}
       >
         {isTodoEditable ? "📁" : "✏️"}
       </button>

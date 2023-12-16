@@ -3,11 +3,11 @@ import { useTodo } from "../context";
 
 function TodoForm() {
   const [todoText, setTodoText] = useState("");
-  const { updateTodos } = useTodo();
+  const { updateTodo } = useTodo();
 
   function addTodo(e) {
     e.preventDefault();
-    updateTodos(todoText);
+    updateTodo(todoText);
     setTodoText("");
   }
 
